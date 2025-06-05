@@ -1,4 +1,4 @@
-# Java BNI Project Test
+# Java BNI Project Test .
 
 This is a simple Spring Boot API that provides user **registration** and **login** functionality using **Oracle SQL** as the database.
 
