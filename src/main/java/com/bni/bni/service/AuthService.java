@@ -43,7 +43,7 @@ public class AuthService {
         return "Registered successfully";
     }
 
-    public String login(String username, String password) {
+    public String login(String username, String password, String emailAddress) {
         Optional<User> user = repo.findByUsername(username);
         if (user.isPresent() && encoder.matches(password, user.get().getPassword())) {
             // Token generation, adjust as needed (no role in entity)
