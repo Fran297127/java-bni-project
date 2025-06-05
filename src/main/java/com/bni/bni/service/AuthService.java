@@ -37,7 +37,7 @@ public class AuthService {
         user.setPassword(encoder.encode(password));
         user.setIsActive(true);
         user.setCreatedAt(OffsetDateTime.now());
-        user.setUpdatedAt(null);
+        user.setUpdatedAt(OffsetDateTime.now());
         repo.save(user);
 
         return "Registered successfully";
