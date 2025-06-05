@@ -45,7 +45,7 @@ public class AuthController {
     public ResponseEntity<Map<String, Object>> login(@RequestBody Map<String, String> body) {
         String username = body.get("username");
         String password = body.get("password");
-        String token = authService.login(username, password, null); // emailAddress tidak digunakan di sini
+        String token = authService.login(username, password); // emailAddress tidak digunakan di sini
 
         Map<String, Object> response = new HashMap<>();
         if (token != null) {
