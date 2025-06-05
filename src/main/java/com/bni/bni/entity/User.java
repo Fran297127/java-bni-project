@@ -5,7 +5,7 @@ import java.time.OffsetDateTime;
 
 
 @Entity
-@Table(name = "users")
+@Table(name = "pointbreak")
 public class User {
 
     @Id
