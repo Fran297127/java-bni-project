@@ -9,12 +9,12 @@ pipeline {
     stages {
         stage('Trigger Build Openshift') {
             steps {
-                sh "oc start-build ${BUILD_NAME} --from-dir=. --follow -n${PROJECT_NAME}"
+                sh "oc start-build ${BUILD_NAME} --from-dir=. --follow -n ${PROJECT_NAME}"
             }
         }
         stage('Deploy to Openshift') {
             steps {
-                sh "oc rollout status dc/${BUILD_NAME} -n${PROJECT_NAME}"
+                sh "oc rollout status deployment/${BUILD_NAME} -n ${PROJECT_NAME}"
             }
         }
     }
