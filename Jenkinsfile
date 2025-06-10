@@ -2,7 +2,7 @@ pipeline {
     agent any
     environment {
         // Define any environment variables here
-        PROJECT_NAME = "FRAN297127-dev"
+        PROJECT_NAME = "fran297127-dev"
         BUILD_NAME = "pointbreak"
     }
 
